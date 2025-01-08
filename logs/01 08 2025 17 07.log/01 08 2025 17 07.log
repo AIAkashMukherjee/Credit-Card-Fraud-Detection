@@ -1,0 +1,18 @@
+[ 2025-01-08 17:07:32,849 ] 12 src.logger.custom_logging - INFO - >>>>>> stage Data Ingestion stage started <<<<<<
+[ 2025-01-08 17:07:32,850 ] 45 src.logger.custom_logging - INFO - yaml file: config/config.yaml loaded successfully
+[ 2025-01-08 17:07:32,851 ] 45 src.logger.custom_logging - INFO - yaml file: params.yaml loaded successfully
+[ 2025-01-08 17:07:32,852 ] 65 src.logger.custom_logging - INFO - created directory at: artifacts/data_ingestion
+[ 2025-01-08 17:07:32,852 ] 14 src.logger.custom_logging - INFO - Data Ingestion Started
+[ 2025-01-08 17:07:38,778 ] 25 src.logger.custom_logging - INFO - Data Ingestion finished
+[ 2025-01-08 17:07:38,780 ] 15 src.logger.custom_logging - INFO - >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x
+[ 2025-01-08 17:07:38,781 ] 12 src.logger.custom_logging - INFO - >>>>>> stage Data Transformation stage started <<<<<<
+[ 2025-01-08 17:07:38,782 ] 45 src.logger.custom_logging - INFO - yaml file: config/config.yaml loaded successfully
+[ 2025-01-08 17:07:38,782 ] 45 src.logger.custom_logging - INFO - yaml file: params.yaml loaded successfully
+[ 2025-01-08 17:07:38,782 ] 65 src.logger.custom_logging - INFO - created directory at: artifacts/data_transformation
+[ 2025-01-08 17:07:38,782 ] 20 src.logger.custom_logging - INFO - Creating data transformation pipeline
+[ 2025-01-08 17:07:39,628 ] 20 src.logger.custom_logging - INFO - Creating data transformation pipeline
+[ 2025-01-08 17:07:40,483 ] 15 src.logger.custom_logging - INFO - >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x

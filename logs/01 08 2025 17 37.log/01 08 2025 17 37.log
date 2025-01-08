@@ -1,0 +1,104 @@
+[ 2025-01-08 17:38:02,236 ] 12 src.logger.custom_logging - INFO - >>>>>> stage Data Ingestion stage started <<<<<<
+[ 2025-01-08 17:38:02,237 ] 45 src.logger.custom_logging - INFO - yaml file: config/config.yaml loaded successfully
+[ 2025-01-08 17:38:02,238 ] 45 src.logger.custom_logging - INFO - yaml file: params.yaml loaded successfully
+[ 2025-01-08 17:38:02,238 ] 65 src.logger.custom_logging - INFO - created directory at: artifacts/data_ingestion
+[ 2025-01-08 17:38:02,238 ] 14 src.logger.custom_logging - INFO - Data Ingestion Started
+[ 2025-01-08 17:38:08,378 ] 25 src.logger.custom_logging - INFO - Data Ingestion finished
+[ 2025-01-08 17:38:08,381 ] 15 src.logger.custom_logging - INFO - >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x
+[ 2025-01-08 17:38:08,381 ] 12 src.logger.custom_logging - INFO - >>>>>> stage Data Transformation stage started <<<<<<
+[ 2025-01-08 17:38:08,382 ] 45 src.logger.custom_logging - INFO - yaml file: config/config.yaml loaded successfully
+[ 2025-01-08 17:38:08,383 ] 45 src.logger.custom_logging - INFO - yaml file: params.yaml loaded successfully
+[ 2025-01-08 17:38:08,383 ] 65 src.logger.custom_logging - INFO - created directory at: artifacts/data_transformation
+[ 2025-01-08 17:38:08,383 ] 20 src.logger.custom_logging - INFO - Creating data transformation pipeline
+[ 2025-01-08 17:38:09,173 ] 20 src.logger.custom_logging - INFO - Creating data transformation pipeline
+[ 2025-01-08 17:38:19,910 ] 15 src.logger.custom_logging - INFO - >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x
+[ 2025-01-08 17:38:19,910 ] 12 src.logger.custom_logging - INFO - >>>>>> stage Model Trainer stage started <<<<<<
+[ 2025-01-08 17:38:19,912 ] 45 src.logger.custom_logging - INFO - yaml file: config/config.yaml loaded successfully
+[ 2025-01-08 17:38:19,912 ] 45 src.logger.custom_logging - INFO - yaml file: params.yaml loaded successfully
+[ 2025-01-08 17:38:19,912 ] 65 src.logger.custom_logging - INFO - created directory at: artifacts/model_trainer
+[ 2025-01-08 17:39:06,958 ] 64 src.logger.custom_logging - ERROR - Error occurred: Graph execution error:
+
+Detected at node strided_slice defined at (most recent call last):
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/main.py", line 30, in <module>
+
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/main.py", line 14, in run_stage
+
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/src/pipeline/stage_03_model_train_pipe.py", line 21, in main
+
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/src/components/model_trainer.py", line 52, in train
+
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/my_Env/lib/python3.11/site-packages/keras/src/utils/traceback_utils.py", line 117, in error_handler
+
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/my_Env/lib/python3.11/site-packages/keras/src/backend/tensorflow/trainer.py", line 371, in fit
+
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/my_Env/lib/python3.11/site-packages/keras/src/backend/tensorflow/trainer.py", line 219, in function
+
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/my_Env/lib/python3.11/site-packages/keras/src/backend/tensorflow/trainer.py", line 132, in multi_step_on_iterator
+
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/my_Env/lib/python3.11/site-packages/keras/src/backend/tensorflow/trainer.py", line 113, in one_step_on_data
+
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/my_Env/lib/python3.11/site-packages/keras/src/backend/tensorflow/trainer.py", line 69, in train_step
+
+Expected begin, end, and strides to be 1D equal size tensors, but got shapes [0], [1], and [1] instead.
+	 [[{{node strided_slice}}]] [Op:__inference_multi_step_on_iterator_1249]
+[ 2025-01-08 17:39:06,959 ] 17 src.logger.custom_logging - ERROR - object.__init__() takes exactly one argument (the instance to initialize)
+Traceback (most recent call last):
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/src/components/model_trainer.py", line 52, in train
+    model.fit(X_train, y_train, validation_split=0.2, batch_size=25, epochs=20, shuffle=True)
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/my_Env/lib/python3.11/site-packages/keras/src/utils/traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/my_Env/lib/python3.11/site-packages/tensorflow/python/eager/execute.py", line 59, in quick_execute
+    except TypeError as e:
+tensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:
+
+Detected at node strided_slice defined at (most recent call last):
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/main.py", line 30, in <module>
+
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/main.py", line 14, in run_stage
+
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/src/pipeline/stage_03_model_train_pipe.py", line 21, in main
+
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/src/components/model_trainer.py", line 52, in train
+
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/my_Env/lib/python3.11/site-packages/keras/src/utils/traceback_utils.py", line 117, in error_handler
+
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/my_Env/lib/python3.11/site-packages/keras/src/backend/tensorflow/trainer.py", line 371, in fit
+
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/my_Env/lib/python3.11/site-packages/keras/src/backend/tensorflow/trainer.py", line 219, in function
+
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/my_Env/lib/python3.11/site-packages/keras/src/backend/tensorflow/trainer.py", line 132, in multi_step_on_iterator
+
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/my_Env/lib/python3.11/site-packages/keras/src/backend/tensorflow/trainer.py", line 113, in one_step_on_data
+
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/my_Env/lib/python3.11/site-packages/keras/src/backend/tensorflow/trainer.py", line 69, in train_step
+
+Expected begin, end, and strides to be 1D equal size tensors, but got shapes [0], [1], and [1] instead.
+	 [[{{node strided_slice}}]] [Op:__inference_multi_step_on_iterator_1249]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/src/pipeline/stage_03_model_train_pipe.py", line 21, in main
+    model_trainer.train()
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/src/components/model_trainer.py", line 65, in train
+    raise CustomException(e, sys)
+          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/src/exceptions/expection.py", line 17, in __init__
+    super().__init__(error_msg)
+TypeError: object.__init__() takes exactly one argument (the instance to initialize)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/main.py", line 14, in run_stage
+    pipeline.main()
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/src/pipeline/stage_03_model_train_pipe.py", line 24, in main
+    raise CustomException(e,sys)
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/src/exceptions/expection.py", line 17, in __init__
+    super().__init__(error_msg)
+TypeError: object.__init__() takes exactly one argument (the instance to initialize)

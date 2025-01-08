@@ -1,0 +1,76 @@
+[ 2025-01-08 17:31:22,790 ] 12 src.logger.custom_logging - INFO - >>>>>> stage Data Ingestion stage started <<<<<<
+[ 2025-01-08 17:31:22,791 ] 45 src.logger.custom_logging - INFO - yaml file: config/config.yaml loaded successfully
+[ 2025-01-08 17:31:22,792 ] 45 src.logger.custom_logging - INFO - yaml file: params.yaml loaded successfully
+[ 2025-01-08 17:31:22,792 ] 65 src.logger.custom_logging - INFO - created directory at: artifacts/data_ingestion
+[ 2025-01-08 17:31:22,792 ] 14 src.logger.custom_logging - INFO - Data Ingestion Started
+[ 2025-01-08 17:31:28,766 ] 25 src.logger.custom_logging - INFO - Data Ingestion finished
+[ 2025-01-08 17:31:28,768 ] 15 src.logger.custom_logging - INFO - >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x
+[ 2025-01-08 17:31:28,768 ] 12 src.logger.custom_logging - INFO - >>>>>> stage Data Transformation stage started <<<<<<
+[ 2025-01-08 17:31:28,770 ] 45 src.logger.custom_logging - INFO - yaml file: config/config.yaml loaded successfully
+[ 2025-01-08 17:31:28,770 ] 45 src.logger.custom_logging - INFO - yaml file: params.yaml loaded successfully
+[ 2025-01-08 17:31:28,770 ] 65 src.logger.custom_logging - INFO - created directory at: artifacts/data_transformation
+[ 2025-01-08 17:31:28,770 ] 20 src.logger.custom_logging - INFO - Creating data transformation pipeline
+[ 2025-01-08 17:31:29,606 ] 20 src.logger.custom_logging - INFO - Creating data transformation pipeline
+[ 2025-01-08 17:31:30,472 ] 15 src.logger.custom_logging - INFO - >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x
+[ 2025-01-08 17:31:30,472 ] 12 src.logger.custom_logging - INFO - >>>>>> stage Model Trainer stage started <<<<<<
+[ 2025-01-08 17:31:30,473 ] 45 src.logger.custom_logging - INFO - yaml file: config/config.yaml loaded successfully
+[ 2025-01-08 17:31:30,474 ] 45 src.logger.custom_logging - INFO - yaml file: params.yaml loaded successfully
+[ 2025-01-08 17:31:30,474 ] 65 src.logger.custom_logging - INFO - created directory at: artifacts/model_trainer
+[ 2025-01-08 17:33:58,094 ] 64 src.logger.custom_logging - ERROR - Error occurred: y should be a 1d array, got an array of shape (56962, 2) instead.
+[ 2025-01-08 17:33:58,094 ] 17 src.logger.custom_logging - ERROR - object.__init__() takes exactly one argument (the instance to initialize)
+Traceback (most recent call last):
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/src/components/model_trainer.py", line 57, in train
+    test_model_score = roc_auc_score(y_test, y_pred)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/my_Env/lib/python3.11/site-packages/sklearn/utils/_param_validation.py", line 216, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/my_Env/lib/python3.11/site-packages/sklearn/metrics/_ranking.py", line 637, in roc_auc_score
+    return _average_binary_score(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/my_Env/lib/python3.11/site-packages/sklearn/metrics/_base.py", line 69, in _average_binary_score
+    return binary_metric(y_true, y_score, sample_weight=sample_weight)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/my_Env/lib/python3.11/site-packages/sklearn/metrics/_ranking.py", line 384, in _binary_roc_auc_score
+    fpr, tpr, _ = roc_curve(y_true, y_score, sample_weight=sample_weight)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/my_Env/lib/python3.11/site-packages/sklearn/utils/_param_validation.py", line 189, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/my_Env/lib/python3.11/site-packages/sklearn/metrics/_ranking.py", line 1142, in roc_curve
+    fps, tps, thresholds = _binary_clf_curve(
+                           ^^^^^^^^^^^^^^^^^^
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/my_Env/lib/python3.11/site-packages/sklearn/metrics/_ranking.py", line 818, in _binary_clf_curve
+    y_score = column_or_1d(y_score)
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/my_Env/lib/python3.11/site-packages/sklearn/utils/validation.py", line 1485, in column_or_1d
+    raise ValueError(
+ValueError: y should be a 1d array, got an array of shape (56962, 2) instead.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/src/pipeline/stage_03_model_train_pipe.py", line 21, in main
+    model_trainer.train()
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/src/components/model_trainer.py", line 65, in train
+    raise CustomException(e, sys)
+          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/src/exceptions/expection.py", line 17, in __init__
+    super().__init__(error_msg)
+TypeError: object.__init__() takes exactly one argument (the instance to initialize)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/main.py", line 14, in run_stage
+    pipeline.main()
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/src/pipeline/stage_03_model_train_pipe.py", line 24, in main
+    raise CustomException(e,sys)
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/src/exceptions/expection.py", line 17, in __init__
+    super().__init__(error_msg)
+TypeError: object.__init__() takes exactly one argument (the instance to initialize)

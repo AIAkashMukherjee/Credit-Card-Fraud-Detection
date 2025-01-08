@@ -1,0 +1,25 @@
+[ 2025-01-08 17:43:18,613 ] 12 src.logger.custom_logging - INFO - >>>>>> stage Data Ingestion stage started <<<<<<
+[ 2025-01-08 17:43:18,615 ] 45 src.logger.custom_logging - INFO - yaml file: config/config.yaml loaded successfully
+[ 2025-01-08 17:43:18,615 ] 45 src.logger.custom_logging - INFO - yaml file: params.yaml loaded successfully
+[ 2025-01-08 17:43:18,615 ] 65 src.logger.custom_logging - INFO - created directory at: artifacts/data_ingestion
+[ 2025-01-08 17:43:18,615 ] 14 src.logger.custom_logging - INFO - Data Ingestion Started
+[ 2025-01-08 17:43:24,331 ] 25 src.logger.custom_logging - INFO - Data Ingestion finished
+[ 2025-01-08 17:43:24,333 ] 15 src.logger.custom_logging - INFO - >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x
+[ 2025-01-08 17:43:24,333 ] 12 src.logger.custom_logging - INFO - >>>>>> stage Data Transformation stage started <<<<<<
+[ 2025-01-08 17:43:24,334 ] 45 src.logger.custom_logging - INFO - yaml file: config/config.yaml loaded successfully
+[ 2025-01-08 17:43:24,334 ] 45 src.logger.custom_logging - INFO - yaml file: params.yaml loaded successfully
+[ 2025-01-08 17:43:24,334 ] 65 src.logger.custom_logging - INFO - created directory at: artifacts/data_transformation
+[ 2025-01-08 17:43:24,334 ] 20 src.logger.custom_logging - INFO - Creating data transformation pipeline
+[ 2025-01-08 17:43:25,180 ] 20 src.logger.custom_logging - INFO - Creating data transformation pipeline
+[ 2025-01-08 17:43:35,353 ] 15 src.logger.custom_logging - INFO - >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x
+[ 2025-01-08 17:43:35,354 ] 12 src.logger.custom_logging - INFO - >>>>>> stage Model Trainer stage started <<<<<<
+[ 2025-01-08 17:43:35,355 ] 45 src.logger.custom_logging - INFO - yaml file: config/config.yaml loaded successfully
+[ 2025-01-08 17:43:35,355 ] 45 src.logger.custom_logging - INFO - yaml file: params.yaml loaded successfully
+[ 2025-01-08 17:43:35,355 ] 65 src.logger.custom_logging - INFO - created directory at: artifacts/model_trainer
+[ 2025-01-08 17:46:05,174 ] 15 src.logger.custom_logging - INFO - >>>>>> stage Model Trainer stage completed <<<<<<
+
+x==========x

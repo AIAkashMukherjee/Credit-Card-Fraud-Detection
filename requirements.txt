@@ -1,0 +1,17 @@
+pandas
+numpy
+mlflow
+scikit-learn
+matplotlib
+mlflow 
+dagshub
+seaborn
+dvc
+streamlit
+python-box
+ensure
+python-dotenv
+imblearn
+tensorflow
+keras
+-e .

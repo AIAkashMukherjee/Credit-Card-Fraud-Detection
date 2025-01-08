@@ -1,0 +1,27 @@
+artifacts_root: artifacts
+
+data_ingestion:
+  root_dir: artifacts/data_ingestion
+  local_data_file: 
+  train_file_path: artifacts/data_ingestion/train.csv
+  test_file_path: artifacts/data_ingestion/test.csv
+
+data_transformation:
+  root_dir: artifacts/data_transformation
+  preprocessor_obj: artifacts/data_transformation/preprocessor.pkl
+  train_file_path: artifacts/data_ingestion/train.csv
+  test_file_path: artifacts/data_ingestion/test.csv
+  save_train_path: artifacts/data_transformation/final_train.csv
+  save_test_path: artifacts/data_transformation/final_test.csv
+
+model_trainer:
+  root_dir: artifacts/model_trainer
+  train_model_path: artifacts/model_trainer/model.pkl
+  training_data_path: artifacts/data_transformation/final_train.csv
+  testing_data_path: artifacts/data_transformation/final_test.csv
+
+model_evaluation:
+  root_dir: artifacts/model_evaluation
+  model_path: artifacts/model_trainer/model.pkl
+  test_data: artifacts/data_transformation/final_test.csv
+  mlflow_uri: ${MLFLOW_TRACKING_URI}  

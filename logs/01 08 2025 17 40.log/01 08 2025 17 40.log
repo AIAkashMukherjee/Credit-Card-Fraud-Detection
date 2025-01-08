@@ -1,0 +1,22 @@
+[ 2025-01-08 17:40:56,053 ] 12 src.logger.custom_logging - INFO - >>>>>> stage Data Ingestion stage started <<<<<<
+[ 2025-01-08 17:40:56,055 ] 45 src.logger.custom_logging - INFO - yaml file: config/config.yaml loaded successfully
+[ 2025-01-08 17:40:56,056 ] 45 src.logger.custom_logging - INFO - yaml file: params.yaml loaded successfully
+[ 2025-01-08 17:40:56,056 ] 65 src.logger.custom_logging - INFO - created directory at: artifacts/data_ingestion
+[ 2025-01-08 17:40:56,056 ] 14 src.logger.custom_logging - INFO - Data Ingestion Started
+[ 2025-01-08 17:41:01,893 ] 25 src.logger.custom_logging - INFO - Data Ingestion finished
+[ 2025-01-08 17:41:01,895 ] 15 src.logger.custom_logging - INFO - >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x
+[ 2025-01-08 17:41:01,896 ] 12 src.logger.custom_logging - INFO - >>>>>> stage Data Transformation stage started <<<<<<
+[ 2025-01-08 17:41:01,897 ] 45 src.logger.custom_logging - INFO - yaml file: config/config.yaml loaded successfully
+[ 2025-01-08 17:41:01,897 ] 45 src.logger.custom_logging - INFO - yaml file: params.yaml loaded successfully
+[ 2025-01-08 17:41:01,897 ] 65 src.logger.custom_logging - INFO - created directory at: artifacts/data_transformation
+[ 2025-01-08 17:41:01,897 ] 20 src.logger.custom_logging - INFO - Creating data transformation pipeline
+[ 2025-01-08 17:41:02,765 ] 20 src.logger.custom_logging - INFO - Creating data transformation pipeline
+[ 2025-01-08 17:41:12,891 ] 15 src.logger.custom_logging - INFO - >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x
+[ 2025-01-08 17:41:12,892 ] 12 src.logger.custom_logging - INFO - >>>>>> stage Model Trainer stage started <<<<<<
+[ 2025-01-08 17:41:12,893 ] 45 src.logger.custom_logging - INFO - yaml file: config/config.yaml loaded successfully
+[ 2025-01-08 17:41:12,893 ] 45 src.logger.custom_logging - INFO - yaml file: params.yaml loaded successfully
+[ 2025-01-08 17:41:12,893 ] 65 src.logger.custom_logging - INFO - created directory at: artifacts/model_trainer
