@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/akashmukherjee/Programming/Practise%20ML/Credit%20Card/mlruns/0/f1b376732fa54ced9ccba1653f4be53b/artifacts
+end_time: 1736348430894
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f1b376732fa54ced9ccba1653f4be53b
+run_name: worried-sponge-268
+run_uuid: f1b376732fa54ced9ccba1653f4be53b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1736348425456
+status: 3
+tags: []
+user_id: akashmukherjee

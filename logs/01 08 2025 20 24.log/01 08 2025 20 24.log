@@ -1,0 +1,11 @@
+[ 2025-01-08 20:24:10,183 ] 28 src.logger.custom_logging - INFO - >>>>>> stage Model Trainer stage started <<<<<<
+[ 2025-01-08 20:24:10,184 ] 45 src.logger.custom_logging - INFO - yaml file: config/config.yaml loaded successfully
+[ 2025-01-08 20:24:10,185 ] 45 src.logger.custom_logging - INFO - yaml file: params.yaml loaded successfully
+[ 2025-01-08 20:24:10,185 ] 65 src.logger.custom_logging - INFO - created directory at: artifacts/model_trainer
+[ 2025-01-08 20:24:45,075 ] 28 src.logger.custom_logging - INFO - >>>>>> stage Model Trainer stage started <<<<<<
+[ 2025-01-08 20:24:45,076 ] 45 src.logger.custom_logging - INFO - yaml file: config/config.yaml loaded successfully
+[ 2025-01-08 20:24:45,077 ] 45 src.logger.custom_logging - INFO - yaml file: params.yaml loaded successfully
+[ 2025-01-08 20:24:45,077 ] 65 src.logger.custom_logging - INFO - created directory at: artifacts/model_trainer
+[ 2025-01-08 20:25:02,632 ] 31 src.logger.custom_logging - INFO - >>>>>> stage Model Trainer stage completed <<<<<<
+
+x==========x

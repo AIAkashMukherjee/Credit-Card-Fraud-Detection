@@ -53,10 +53,10 @@ class ModelTrainer:
             ])
 
             model.compile(Adam(learning_rate=0.0001),loss='sparse_categorical_crossentropy',metrics=['accuracy'])
-            model.fit(X_train, y_train, validation_split=0.2, batch_size=25, epochs=20, shuffle=True)
+            model.fit(X_train, y_train, validation_split=0.2, batch_size=25, epochs=2, shuffle=True)
             
             
-            y_pred = model.predict(X_test)[:, 1]
+            y_pred = model.predict(X_test)[:, 1] 
             
             test_model_score = roc_auc_score(y_test, y_pred)
 

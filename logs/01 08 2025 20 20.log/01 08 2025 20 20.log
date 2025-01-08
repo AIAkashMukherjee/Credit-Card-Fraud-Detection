@@ -1,0 +1,67 @@
+[ 2025-01-08 20:20:14,725 ] 28 src.logger.custom_logging - INFO - >>>>>> stage Prepare Base Model stage started <<<<<<
+[ 2025-01-08 20:20:14,726 ] 45 src.logger.custom_logging - INFO - yaml file: config/config.yaml loaded successfully
+[ 2025-01-08 20:20:14,726 ] 45 src.logger.custom_logging - INFO - yaml file: params.yaml loaded successfully
+[ 2025-01-08 20:20:14,726 ] 65 src.logger.custom_logging - INFO - created directory at: artifacts/data_transformation
+[ 2025-01-08 20:20:14,726 ] 20 src.logger.custom_logging - INFO - Creating data transformation pipeline
+[ 2025-01-08 20:20:15,556 ] 20 src.logger.custom_logging - INFO - Creating data transformation pipeline
+[ 2025-01-08 20:20:25,878 ] 31 src.logger.custom_logging - INFO - >>>>>> stage Prepare Base Model stage completed <<<<<<
+
+x==========x
+[ 2025-01-08 20:20:30,037 ] 28 src.logger.custom_logging - INFO - >>>>>> stage Model Trainer stage started <<<<<<
+[ 2025-01-08 20:20:30,038 ] 45 src.logger.custom_logging - INFO - yaml file: config/config.yaml loaded successfully
+[ 2025-01-08 20:20:30,039 ] 45 src.logger.custom_logging - INFO - yaml file: params.yaml loaded successfully
+[ 2025-01-08 20:20:30,039 ] 65 src.logger.custom_logging - INFO - created directory at: artifacts/model_trainer
+[ 2025-01-08 20:23:03,658 ] 68 src.logger.custom_logging - ERROR - Error occurred: y should be a 1d array, got an array of shape (56962, 2) instead.
+[ 2025-01-08 20:23:03,659 ] 33 src.logger.custom_logging - ERROR - object.__init__() takes exactly one argument (the instance to initialize)
+Traceback (most recent call last):
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/src/components/model_trainer.py", line 61, in train
+    test_model_score = roc_auc_score(y_test, y_pred)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/my_Env/lib/python3.11/site-packages/sklearn/utils/_param_validation.py", line 216, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/my_Env/lib/python3.11/site-packages/sklearn/metrics/_ranking.py", line 637, in roc_auc_score
+    return _average_binary_score(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/my_Env/lib/python3.11/site-packages/sklearn/metrics/_base.py", line 69, in _average_binary_score
+    return binary_metric(y_true, y_score, sample_weight=sample_weight)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/my_Env/lib/python3.11/site-packages/sklearn/metrics/_ranking.py", line 384, in _binary_roc_auc_score
+    fpr, tpr, _ = roc_curve(y_true, y_score, sample_weight=sample_weight)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/my_Env/lib/python3.11/site-packages/sklearn/utils/_param_validation.py", line 189, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/my_Env/lib/python3.11/site-packages/sklearn/metrics/_ranking.py", line 1142, in roc_curve
+    fps, tps, thresholds = _binary_clf_curve(
+                           ^^^^^^^^^^^^^^^^^^
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/my_Env/lib/python3.11/site-packages/sklearn/metrics/_ranking.py", line 818, in _binary_clf_curve
+    y_score = column_or_1d(y_score)
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/my_Env/lib/python3.11/site-packages/sklearn/utils/validation.py", line 1485, in column_or_1d
+    raise ValueError(
+ValueError: y should be a 1d array, got an array of shape (56962, 2) instead.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/src/pipeline/stage_03_model_train_pipe.py", line 21, in main
+    model_trainer.train()
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/src/components/model_trainer.py", line 69, in train
+    raise CustomException(e, sys)
+          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/src/exceptions/expection.py", line 17, in __init__
+    super().__init__(error_msg)
+TypeError: object.__init__() takes exactly one argument (the instance to initialize)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/src/pipeline/stage_03_model_train_pipe.py", line 30, in <module>
+    obj.main()
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/src/pipeline/stage_03_model_train_pipe.py", line 24, in main
+    raise CustomException(e,sys)
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/src/exceptions/expection.py", line 17, in __init__
+    super().__init__(error_msg)
+TypeError: object.__init__() takes exactly one argument (the instance to initialize)

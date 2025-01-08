@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/akashmukherjee/Programming/Practise%20ML/Credit%20Card/mlruns/0/60af1d7aa0724b01a60141c093092bbc/artifacts
+end_time: 1736348197867
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 60af1d7aa0724b01a60141c093092bbc
+run_name: resilient-shrew-214
+run_uuid: 60af1d7aa0724b01a60141c093092bbc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1736348193153
+status: 3
+tags: []
+user_id: akashmukherjee

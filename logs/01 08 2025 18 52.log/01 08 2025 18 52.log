@@ -1,0 +1,9 @@
+[ 2025-01-08 18:52:56,046 ] 31 src.logger.custom_logging - INFO - >>>>>> stage Data Ingestion stage started <<<<<<
+[ 2025-01-08 18:52:56,047 ] 45 src.logger.custom_logging - INFO - yaml file: config/config.yaml loaded successfully
+[ 2025-01-08 18:52:56,048 ] 45 src.logger.custom_logging - INFO - yaml file: params.yaml loaded successfully
+[ 2025-01-08 18:52:56,048 ] 65 src.logger.custom_logging - INFO - created directory at: artifacts/data_ingestion
+[ 2025-01-08 18:52:56,048 ] 14 src.logger.custom_logging - INFO - Data Ingestion Started
+[ 2025-01-08 18:53:01,955 ] 25 src.logger.custom_logging - INFO - Data Ingestion finished
+[ 2025-01-08 18:53:01,957 ] 34 src.logger.custom_logging - INFO - >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x

@@ -14,4 +14,4 @@ python-dotenv
 imblearn
 tensorflow
 keras
--e .
+# -e .

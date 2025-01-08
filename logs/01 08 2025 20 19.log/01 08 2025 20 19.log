@@ -1,0 +1,36 @@
+[ 2025-01-08 20:19:10,911 ] 31 src.logger.custom_logging - INFO - >>>>>> stage Data Ingestion stage started <<<<<<
+[ 2025-01-08 20:19:10,912 ] 45 src.logger.custom_logging - INFO - yaml file: config/config.yaml loaded successfully
+[ 2025-01-08 20:19:10,913 ] 45 src.logger.custom_logging - INFO - yaml file: params.yaml loaded successfully
+[ 2025-01-08 20:19:10,913 ] 65 src.logger.custom_logging - INFO - created directory at: artifacts/data_ingestion
+[ 2025-01-08 20:19:10,913 ] 14 src.logger.custom_logging - INFO - Data Ingestion Started
+[ 2025-01-08 20:19:16,646 ] 25 src.logger.custom_logging - INFO - Data Ingestion finished
+[ 2025-01-08 20:19:16,648 ] 34 src.logger.custom_logging - INFO - >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x
+[ 2025-01-08 20:19:26,411 ] 31 src.logger.custom_logging - INFO - >>>>>> stage Data Ingestion stage started <<<<<<
+[ 2025-01-08 20:19:26,412 ] 45 src.logger.custom_logging - INFO - yaml file: config/config.yaml loaded successfully
+[ 2025-01-08 20:19:26,412 ] 45 src.logger.custom_logging - INFO - yaml file: params.yaml loaded successfully
+[ 2025-01-08 20:19:26,412 ] 65 src.logger.custom_logging - INFO - created directory at: artifacts/data_ingestion
+[ 2025-01-08 20:19:26,412 ] 14 src.logger.custom_logging - INFO - Data Ingestion Started
+[ 2025-01-08 20:19:32,194 ] 25 src.logger.custom_logging - INFO - Data Ingestion finished
+[ 2025-01-08 20:19:32,196 ] 34 src.logger.custom_logging - INFO - >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x
+[ 2025-01-08 20:19:33,398 ] 28 src.logger.custom_logging - INFO - >>>>>> stage Prepare Base Model stage started <<<<<<
+[ 2025-01-08 20:19:33,399 ] 45 src.logger.custom_logging - INFO - yaml file: config/config.yaml loaded successfully
+[ 2025-01-08 20:19:33,399 ] 45 src.logger.custom_logging - INFO - yaml file: params.yaml loaded successfully
+[ 2025-01-08 20:19:33,399 ] 65 src.logger.custom_logging - INFO - created directory at: artifacts/data_transformation
+[ 2025-01-08 20:19:33,399 ] 20 src.logger.custom_logging - INFO - Creating data transformation pipeline
+[ 2025-01-08 20:19:34,220 ] 20 src.logger.custom_logging - INFO - Creating data transformation pipeline
+[ 2025-01-08 20:19:44,358 ] 31 src.logger.custom_logging - INFO - >>>>>> stage Prepare Base Model stage completed <<<<<<
+
+x==========x
+[ 2025-01-08 20:19:54,025 ] 28 src.logger.custom_logging - INFO - >>>>>> stage Prepare Base Model stage started <<<<<<
+[ 2025-01-08 20:19:54,026 ] 45 src.logger.custom_logging - INFO - yaml file: config/config.yaml loaded successfully
+[ 2025-01-08 20:19:54,026 ] 45 src.logger.custom_logging - INFO - yaml file: params.yaml loaded successfully
+[ 2025-01-08 20:19:54,026 ] 65 src.logger.custom_logging - INFO - created directory at: artifacts/data_transformation
+[ 2025-01-08 20:19:54,026 ] 20 src.logger.custom_logging - INFO - Creating data transformation pipeline
+[ 2025-01-08 20:19:54,857 ] 20 src.logger.custom_logging - INFO - Creating data transformation pipeline
+[ 2025-01-08 20:20:04,910 ] 31 src.logger.custom_logging - INFO - >>>>>> stage Prepare Base Model stage completed <<<<<<
+
+x==========x

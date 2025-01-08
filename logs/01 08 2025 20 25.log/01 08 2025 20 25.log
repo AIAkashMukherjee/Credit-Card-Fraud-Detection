@@ -1,0 +1,49 @@
+[ 2025-01-08 20:25:14,830 ] 28 src.logger.custom_logging - INFO - >>>>>> stage Model Trainer stage started <<<<<<
+[ 2025-01-08 20:25:14,831 ] 45 src.logger.custom_logging - INFO - yaml file: config/config.yaml loaded successfully
+[ 2025-01-08 20:25:14,831 ] 45 src.logger.custom_logging - INFO - yaml file: params.yaml loaded successfully
+[ 2025-01-08 20:25:14,831 ] 65 src.logger.custom_logging - INFO - created directory at: artifacts/model_trainer
+[ 2025-01-08 20:25:32,501 ] 31 src.logger.custom_logging - INFO - >>>>>> stage Model Trainer stage completed <<<<<<
+
+x==========x
+[ 2025-01-08 20:25:34,480 ] 29 src.logger.custom_logging - INFO - >>>>>> stage Model Evaluation stage started <<<<<<
+[ 2025-01-08 20:25:34,481 ] 45 src.logger.custom_logging - INFO - yaml file: config/config.yaml loaded successfully
+[ 2025-01-08 20:25:34,482 ] 45 src.logger.custom_logging - INFO - yaml file: params.yaml loaded successfully
+[ 2025-01-08 20:25:34,482 ] 65 src.logger.custom_logging - INFO - created directory at: artifacts/model_evaluation
+[ 2025-01-08 20:25:37,830 ] 34 src.logger.custom_logging - ERROR - y should be a 1d array, got an array of shape (56962, 2) instead.
+Traceback (most recent call last):
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/src/pipeline/stage_o4_model_Eval_pipe.py", line 31, in <module>
+    obj.main()
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/src/pipeline/stage_o4_model_Eval_pipe.py", line 25, in main
+    raise e
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/src/pipeline/stage_o4_model_Eval_pipe.py", line 22, in main
+    evaluation.evaluation()
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/src/components/model_evalutaion.py", line 41, in evaluation
+    model = self.evaluate_model()
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/src/components/model_evalutaion.py", line 28, in evaluate_model
+    roc = roc_auc_score(y_test, y_pred)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/my_Env/lib/python3.11/site-packages/sklearn/utils/_param_validation.py", line 216, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/my_Env/lib/python3.11/site-packages/sklearn/metrics/_ranking.py", line 637, in roc_auc_score
+    return _average_binary_score(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/my_Env/lib/python3.11/site-packages/sklearn/metrics/_base.py", line 69, in _average_binary_score
+    return binary_metric(y_true, y_score, sample_weight=sample_weight)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/my_Env/lib/python3.11/site-packages/sklearn/metrics/_ranking.py", line 384, in _binary_roc_auc_score
+    fpr, tpr, _ = roc_curve(y_true, y_score, sample_weight=sample_weight)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/my_Env/lib/python3.11/site-packages/sklearn/utils/_param_validation.py", line 189, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/my_Env/lib/python3.11/site-packages/sklearn/metrics/_ranking.py", line 1142, in roc_curve
+    fps, tps, thresholds = _binary_clf_curve(
+                           ^^^^^^^^^^^^^^^^^^
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/my_Env/lib/python3.11/site-packages/sklearn/metrics/_ranking.py", line 818, in _binary_clf_curve
+    y_score = column_or_1d(y_score)
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/akashmukherjee/Programming/Practise ML/Credit Card/my_Env/lib/python3.11/site-packages/sklearn/utils/validation.py", line 1485, in column_or_1d
+    raise ValueError(
+ValueError: y should be a 1d array, got an array of shape (56962, 2) instead.
