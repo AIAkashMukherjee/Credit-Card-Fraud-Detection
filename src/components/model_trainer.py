@@ -5,12 +5,12 @@ import pandas as pd
 from sklearn.base import BaseEstimator
 import keras
 from keras import backend as K
-from keras.models import Sequential 
-from keras.layers import Activation
-from keras.layers import Dense
+from keras.models import Sequential  # type: ignore
+from keras.layers import Activation # type: ignore
+from keras.layers import Dense  # type: ignore
 from keras import Input
-from keras.optimizers import Adam
-from keras.metrics import categorical_crossentropy
+from keras.optimizers import Adam   # type: ignore
+from keras.metrics import categorical_crossentropy  # type: ignore
 from sklearn.metrics import roc_auc_score
 from src.utils.utlis import *
 from src.exceptions.expection import CustomException
